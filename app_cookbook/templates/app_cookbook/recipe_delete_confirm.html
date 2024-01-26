@@ -1,0 +1,49 @@
+{% extends 'app_cookbook/layouts/layout_base.html' %}
+
+{% block title %}Удаление рецепта{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row text-center">
+        <div class="card-body">
+            <form method="post" class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Удаление рецепта</h4>
+                        </div>
+                        <div class="card-body">
+                            {% csrf_token %}
+                            <p>Действительно хотите удалить рецепт {{ object.name|title }}?</p>
+                            <button type="submit" class="btn btn-lg btn-outline-danger col-3">
+                                Удалить
+                            </button>
+                            <a href="{% url 'app_cookbook:recipes' %}"
+                               class="btn btn-lg btn-block btn-outline-success col-3">
+                                Отмена
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block element %}
+
+
+
+
+{% endblock %}
+
+{% block blog %}
+
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'app_cookbook/layouts/layout_base.html' %}
+
+{% block title %}Создание рецепта{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row text-center">
+        <div class="card-body">
+            <form method="post" class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            {% if object %}
+                                Редактирование рецепта
+                            {% else %}
+                                Добавление рецепта
+                            {% endif %}
+                        </div>
+                        <div class="card-body">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-outline-success">
+                                {% if object %}
+                                    Сохранить
+                                {% else %}
+                                    Добавить
+                                {% endif %}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block element %}
+
+
+
+
+{% endblock %}
+
+{% block blog %}
+
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+<header>
+    <section class="container py-3">
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+            <a href="{% url 'admin:index' %}" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-basket"
+                     viewBox="0 0 16 16">
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5"/>
+                </svg>
+                <span class="fs-4">Поварская книга</span>
+            </a>
+
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <a class="me-3 py-2 link-body-emphasis text-decoration-none"
+                   href="{% url 'app_cookbook:home' %}">
+                    Главная
+                </a>
+                <a class="me-3 py-2 link-body-emphasis text-decoration-none"
+                   href="{% url 'app_cookbook:recipes' %}">
+                    Рецепты
+                </a>
+                <a class="me-3 py-2 link-body-emphasis text-decoration-none"
+                   href="{% url 'app_cookbook:products' %}">
+                    Каталог продуктов
+                </a>
+            </nav>
+        </div>
+    </section>
+</header>
