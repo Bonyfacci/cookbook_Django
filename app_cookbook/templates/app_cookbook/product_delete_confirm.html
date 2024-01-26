@@ -1,0 +1,49 @@
+{% extends 'app_cookbook/layouts/layout_base.html' %}
+
+{% block title %}Удаление продукта{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row text-center">
+        <div class="card-body">
+            <form method="post" class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Удаление продукта</h4>
+                        </div>
+                        <div class="card-body">
+                            {% csrf_token %}
+                            <p>Действительно хотите удалить продукт {{ object.name|title }}?</p>
+                            <button type="submit" class="btn btn-lg btn-outline-danger col-3">
+                                Удалить
+                            </button>
+                            <a href="{% url 'app_cookbook:products' %}"
+                               class="btn btn-lg btn-block btn-outline-success col-3">
+                                Отмена
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block element %}
+
+
+
+
+{% endblock %}
+
+{% block blog %}
+
+
+
+{% endblock %}

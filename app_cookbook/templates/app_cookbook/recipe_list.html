@@ -1,0 +1,45 @@
+{% extends 'app_cookbook/layouts/layout_base.html' %}
+
+{% block title %}Продукты{% endblock %}
+
+
+{% block content %}
+
+<section class="container">
+    <div class="col-4">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header" style="height:50px">
+                <h4 class="my-0 font-weight-normal">Создать рецепт</h4>
+            </div>
+            <div class="card-body">
+                <div class="card-body">
+                    <a href="{% url 'app_cookbook:recipe_create' %}"
+                       class="btn btn-lg btn-block btn-outline-success col-7">
+                        Создать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-4 mb-3 text-center">
+        {% for object in object_list %}
+            {% include 'app_cookbook/layouts/layout_card_recipe.html' %}
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
+
+
+{% block element %}
+
+
+
+
+{% endblock %}
+
+{% block blog %}
+
+
+
+{% endblock %}

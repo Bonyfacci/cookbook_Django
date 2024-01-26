@@ -1,0 +1,33 @@
+{% extends 'app_cookbook/layouts/layout_base.html' %}
+
+{% block title %}Поварская книга{% endblock %}
+
+{% block content %}
+<section class="container">
+    <h1>Рецепты в которых не содержиться: {{ product_name }}</h1>
+    <div>
+        <table class="table table-bordered border-dark table-striped table-hover">
+            <thead>
+            <tr>
+                <th class="text-center" scope="col">id</th>
+                <th class="text-center" scope="col">Название рецепта</th>
+                <th class="text-center" scope="col">Название продуктов</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for object in object_list %}
+                    <tr>
+                        <th class="text-center" scope="row">{{ object.pk }}</th>
+                        <td class="text-center">{{ object.name }}</td>
+                        <td class="text-center">
+                            {% for product in object.products.all %}
+                            {{ product.name }}<br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
